@@ -41,7 +41,25 @@
     [BDRecognizerButton addTarget:self action:@selector(sdkUIRecognitionAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:BDRecognizerButton];
 
+    
+    UIButton *BDVoiceButton = [[UIButton alloc]initWithFrame:CGRectMake(140, 370, 100, 40)];
+    [BDVoiceButton setTitle:@"长按说话" forState:UIControlStateNormal];
+    [BDVoiceButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    BDVoiceButton.layer.borderColor = [UIColor blackColor].CGColor;
+    BDVoiceButton.layer.borderWidth = 2;
+    BDVoiceButton.layer.cornerRadius = 5;
+    BDVoiceButton.layer.masksToBounds = YES;
+    [BDVoiceButton addTarget:self action:@selector(sdkUIRecognitionAPIAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:BDVoiceButton];
+
 }
+
+
+- (void)sdkUIRecognitionAPIAction:(UIButton *)button
+{
+
+}
+
 
 - (void)sdkUIRecognitionAction:(UIButton*)button
 {
